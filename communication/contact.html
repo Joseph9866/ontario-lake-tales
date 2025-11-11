@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Ontario's Lakes Turtles</title>
+    <meta name="description" content="Contact Ontario's Lakes Turtles to report sightings, ask questions, or get involved in conservation efforts.">
+    <meta property="og:title" content="Contact Us - Ontario's Lakes Turtles">
+    <meta property="og:description" content="Get in touch with Ontario's Lakes Turtles to report turtle sightings or learn about conservation opportunities.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <!-- Placeholder for logo image -->
+                    <div style="width: 60px; height: 60px; background-color: var(--color-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">OLT</div>
+                    <h1>Ontario's Lakes Turtles</h1>
+                </div>
+                <nav aria-label="Main Navigation">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../endangered/overview.html">Endangered Turtles</a></li>
+                        <li><a href="../solutions/saving-turtles.html">Conservation</a></li>
+                        <li><a href="../lakes/lake-ontario.html">Lakes</a></li>
+                        <li><a href="../parks/algonquin.html">Parks</a></li>
+                        <li><a href="../research.html">Research</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Home</a> > <span>Contact</span>
+            </div>
+            
+            <h1 class="section-title">Contact Us</h1>
+            
+            <section class="info-section">
+                <h2>Get In Touch</h2>
+                <p>We welcome your questions, comments, and reports about turtle sightings in Ontario. Your observations help us track turtle populations and direct conservation efforts where they're needed most.</p>
+                
+                <div class="success-message" id="success-message" role="alert" aria-live="polite">
+                    <h3>Thank You!</h3>
+                    <p>Your message has been sent successfully. We'll respond as soon as possible.</p>
+                </div>
+                
+                <form id="contact-form" novalidate aria-labelledby="contact-form-title">
+                    <fieldset>
+                        <legend id="contact-form-title" class="sr-only">Contact Form</legend>
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" class="form-control" 
+                                   required 
+                                   aria-required="true"
+                                   minlength="2"
+                                   maxlength="100"
+                                   placeholder="Enter your full name"
+                                   aria-describedby="name-help">
+                            <small id="name-help" class="form-help">Please enter your full name (2-100 characters)</small>
+                            <div class="error-message" id="name-error" aria-live="polite"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" class="form-control" 
+                                   required 
+                                   aria-required="true"
+                                   placeholder="your.email@example.com"
+                                   aria-describedby="email-help">
+                            <small id="email-help" class="form-help">We'll never share your email with anyone else</small>
+                            <div class="error-message" id="email-error" aria-live="polite"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="topic">Topic <span class="required">*</span></label>
+                            <select id="topic" name="topic" class="form-control" 
+                                    required 
+                                    aria-required="true"
+                                    aria-describedby="topic-help">
+                                <option value="">Please select a topic</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="sighting">Turtle Sighting Report</option>
+                                <option value="nesting">Nesting Site Report</option>
+                                <option value="injured">Injured Turtle Report</option>
+                                <option value="volunteer">Volunteer Opportunity</option>
+                                <option value="donation">Donation Information</option>
+                                <option value="education">Educational Resources</option>
+                                <option value="partnership">Partnership Inquiry</option>
+                                <option value="feedback">Website Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <small id="topic-help" class="form-help">Choose the most relevant topic for your message</small>
+                            <div class="error-message" id="topic-error" aria-live="polite"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject <span class="required">*</span></label>
+                            <input type="text" id="subject" name="subject" class="form-control" 
+                                   required 
+                                   aria-required="true"
+                                   minlength="5"
+                                   maxlength="150"
+                                   placeholder="Brief subject of your message"
+                                   aria-describedby="subject-help">
+                            <small id="subject-help" class="form-help">Please provide a clear subject (5-150 characters)</small>
+                            <div class="error-message" id="subject-error" aria-live="polite"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" class="form-control" 
+                                      required 
+                                      aria-required="true"
+                                      minlength="10"
+                                      maxlength="2000"
+                                      rows="6"
+                                      placeholder="Please provide details about your inquiry, turtle sighting, or how you'd like to help..."
+                                      aria-describedby="message-help"></textarea>
+                            <small id="message-help" class="form-help">Please provide detailed information (10-2000 characters)</small>
+                            <div class="error-message" id="message-error" aria-live="polite"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                                <label for="newsletter">Yes, I'd like to receive occasional updates about turtle conservation efforts in Ontario</label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn" aria-label="Send your message">Send Message</button>
+                    </fieldset>
+                </form>
+            </section>
+            
+            <section class="info-section">
+                <h2>How You Can Help Protect Ontario's Turtles</h2>
+                
+                <div class="help-grid">
+                    <div class="help-item">
+                        <h3>Report Turtle Sightings</h3>
+                        <p>Your observations are valuable! Report turtle sightings to help researchers track populations and distribution.</p>
+                        <ul>
+                            <li>Note the date, time, and precise location</li>
+                            <li>Take photos if possible (from a safe distance)</li>
+                            <li>Record the species if you can identify it</li>
+                            <li>Note any unusual behavior or concerns</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="help-item">
+                        <h3>Help Turtles Cross Roads</h3>
+                        <p>Spring and summer are nesting seasons when turtles frequently cross roads.</p>
+                        <ul>
+                            <li>Always pull over safely first</li>
+                            <li>Help turtles cross in the direction they were heading</li>
+                            <li>Never relocate turtles to new areas</li>
+                            <li>Wash hands after handling turtles</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="help-item">
+                        <h3>Report Injured Turtles</h3>
+                        <p>If you find an injured turtle:</p>
+                        <ul>
+                            <li><strong>Note exact location</strong> (GPS coordinates if possible)</li>
+                            <li><strong>Take photos</strong> if it's safe to do so</li>
+                            <li><strong>Contact wildlife rehabilitation</strong> immediately</li>
+                            <li><strong>Transport safely</strong> in a well-ventilated container if necessary</li>
+                            <li><strong>Do not attempt treatment</strong> yourself</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="help-item">
+                        <h3>🌿 Protect Turtle Habitat</h3>
+                        <p>Help preserve and restore turtle habitats:</p>
+                        <ul>
+                            <li>Support wetland conservation efforts</li>
+                            <li>Participate in shoreline cleanups</li>
+                            <li>Report habitat destruction</li>
+                            <li>Create turtle-friendly spaces on your property</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="emergency-contact">
+                    <h3>Emergency Contacts for Injured Turtles</h3>
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <h4>Ontario Turtle Conservation Centre</h4>
+                            <p>📞 <a href="tel:17057415267">(705) 741-5267</a></p>
+                            <p>🌐 <a href="https://ontarioturtle.ca" target="_blank">ontarioturtle.ca</a></p>
+                        </div>
+                        <div class="contact-card">
+                            <h4>Local Wildlife Rehabilitation</h4>
+                            <p>📞 Contact your nearest wildlife center</p>
+                            <p>🌐 <a href="https://www.ontariowildliferescue.ca" target="_blank">ontariowildliferescue.ca</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-center"><strong>For more information on conservation projects, visit our <a href="../solutions/saving-turtles.html">Saving Turtles Projects</a> page.</strong></p>
+            </section>
+            
+            <a href="#" class="back-to-top">Back to Top</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Ontario's Lakes Turtles</h3>
+                    <p>Dedicated to the conservation and protection of Ontario's native turtle species and their habitats.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../endangered/overview.html">Endangered Turtles</a></li>
+                        <li><a href="../solutions/saving-turtles.html">Conservation Projects</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="../research.html">Research</a></li>
+                        <li><a href="../scientific.html">Scientific Data</a></li>
+                        <li><a href="../lakes/lake-ontario.html">Lakes</a></li>
+                        <li><a href="../parks/algonquin.html">Parks</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Ontario's Lakes Turtles. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced form validation and submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+            const successMessage = document.getElementById('success-message');
+            
+            // Error message elements
+            const errorElements = {
+                name: document.getElementById('name-error'),
+                email: document.getElementById('email-error'),
+                topic: document.getElementById('topic-error'),
+                subject: document.getElementById('subject-error'),
+                message: document.getElementById('message-error')
+            };
+            
+            // Clear error messages
+            function clearErrors() {
+                Object.values(errorElements).forEach(error => {
+                    error.textContent = '';
+                    error.className = 'error-message';
+                });
+                
+                // Remove error classes from form controls
+                const formControls = form.querySelectorAll('.form-control');
+                formControls.forEach(control => {
+                    control.classList.remove('error');
+                });
+            }
+            
+            // Show error message
+            function showError(field, message) {
+                errorElements[field].textContent = message;
+                errorElements[field].className = 'error-message show';
+                document.getElementById(field).classList.add('error');
+            }
+            
+            // Validate individual field
+            function validateField(field) {
+                const element = document.getElementById(field);
+                const value = element.value.trim();
+                
+                switch(field) {
+                    case 'name':
+                        if (value.length < 2) return 'Name must be at least 2 characters long';
+                        if (value.length > 100) return 'Name must be less than 100 characters';
+                        break;
+                    case 'email':
+                        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return 'Please enter a valid email address';
+                        break;
+                    case 'topic':
+                        if (!value) return 'Please select a topic';
+                        break;
+                    case 'subject':
+                        if (value.length < 5) return 'Subject must be at least 5 characters long';
+                        if (value.length > 150) return 'Subject must be less than 150 characters';
+                        break;
+                    case 'message':
+                        if (value.length < 10) return 'Message must be at least 10 characters long';
+                        if (value.length > 2000) return 'Message must be less than 2000 characters';
+                        break;
+                }
+                
+                return '';
+            }
+            
+            // Validate entire form
+            function validateForm() {
+                let isValid = true;
+                const fields = ['name', 'email', 'topic', 'subject', 'message'];
+                
+                fields.forEach(field => {
+                    const error = validateField(field);
+                    if (error) {
+                        showError(field, error);
+                        isValid = false;
+                    }
+                });
+                
+                return isValid;
+            }
+            
+            // Real-time validation
+            form.addEventListener('input', function(e) {
+                const field = e.target.name;
+                if (field && errorElements[field]) {
+                    const error = validateField(field);
+                    if (error) {
+                        showError(field, error);
+                    } else {
+                        errorElements[field].textContent = '';
+                        errorElements[field].className = 'error-message';
+                        e.target.classList.remove('error');
+                    }
+                }
+            });
+            
+            // Form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                clearErrors();
+                
+                if (validateForm()) {
+                    // Show success message
+                    successMessage.classList.add('show');
+                    
+                    // Scroll to success message
+                    successMessage.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                    
+                    // Reset form after delay
+                    setTimeout(() => {
+                        form.reset();
+                        successMessage.classList.remove('show');
+                    }, 5000);
+                } else {
+                    // Focus on first error
+                    const firstError = form.querySelector('.error');
+                    if (firstError) {
+                        firstError.focus();
+                    }
+                }
+            });
+            
+            // Add CSS for new elements if not already in styles.css
+            const style = document.createElement('style');
+            style.textContent = `
+                .required { color: #d32f2f; }
+                .form-help { color: #666; font-size: 0.875rem; margin-top: 0.25rem; display: block; }
+                .error-message { color: #d32f2f; font-size: 0.875rem; margin-top: 0.25rem; display: none; }
+                .error-message.show { display: block; }
+                .form-control.error { border-color: #d32f2f; box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.2); }
+                .checkbox-group { display: flex; align-items: flex-start; gap: 0.5rem; }
+                .checkbox-group input[type="checkbox"] { margin-top: 0.25rem; }
+                .help-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+                .help-item { background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--color-secondary); }
+                .emergency-contact { background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+                .contact-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem; }
+                .contact-card { background: white; padding: 1rem; border-radius: 6px; border: 1px solid #ddd; }
+                .text-center { text-align: center; }
+                .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>
