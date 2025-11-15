@@ -144,22 +144,24 @@ main {
   min-height: calc(100vh - 280px);
 }
 
-/* UPDATED Hero Section */
+/* UPDATED Hero Section - Full Screen */
 .hero {
   background: 
-   linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+   linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url('../images/turtles/home2.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   color: var(--color-white);
   text-align: center;
-  padding: 8rem 2rem;
-  margin-bottom: 3rem;
-  border-radius: 12px;
+  padding: 0;
+  margin: 0 0 3rem 0;
+  border-radius: 0;
   position: relative;
   overflow: hidden;
-  min-height: 60vh;
+  min-height: 100vh;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -168,6 +170,7 @@ main {
 .hero > * {
   position: relative;
   z-index: 2;
+  padding: 0 2rem;
 }
 
 .hero h1 {
@@ -780,9 +783,12 @@ footer {
 /* Mobile optimization for hero section */
 @media (max-width: 768px) {
   .hero {
-    padding: 4rem 1.5rem;
-    min-height: 50vh;
+    min-height: 100vh;
     background-attachment: scroll; /* Better performance on mobile */
+  }
+  
+  .hero > * {
+    padding: 0 1.5rem;
   }
   
   .hero h1 {
